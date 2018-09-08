@@ -8,18 +8,19 @@
 #include "include/JSBase.h"
 #include "include/JSContextRef.h"
 #include "include/JSObjectRef.h"
-
+#include <stdio.h>
 namespace xxx {
 
     class actuator {
     public:
         actuator();
-        actuator()= default;
         ~actuator();
 
     public:
         JSGlobalContextRef globalContext_ref;
         JSObjectRef global_ref;
+    public:
+        char* getValue();
     };
 }
 

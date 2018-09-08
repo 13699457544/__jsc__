@@ -29,9 +29,15 @@ xxx::actuator::actuator() {
             0,
             0,
     };
-    JSClassRef ref = ::JSClassCreate(&definition)
+    JSClassRef ref = ::JSClassCreate(&definition);
+    globalContext_ref = JSGlobalContextCreate(ref);
+    printf("globalContextRef create sucessful");
 }
 
 xxx::actuator::~actuator() {
 
+}
+
+char* xxx::actuator::getValue() {
+    return "this is global text";
 }
